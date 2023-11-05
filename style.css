@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+/* ==========hedding text animation========= */
+header{
+    background-color: #b14d4d;
+}
+#text_animation{
+    width: 100%;
+    height: 300px;
+    background-color: aliceblue;
+}
+.wellcome{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 800;
+    animation-name: txt_anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+@keyframes txt_anim{
+    0%{
+        transform: scale(0);
+        color: black;
+    }
+    10%{
+        transform: scale(1);
+        -webkit-text-stroke: 1px red;
+        background: -webkit-linear-gradient(45deg,white, white, red,white, blue,green,yellow,red, white,white,black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+    40%{
+        transform: scale(1);
+        -webkit-text-stroke: 1px red;
+        background: -webkit-linear-gradient(45deg,white, white, red,blue, white,green,yellow,red, white,white,black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+    70%{
+        transform: scale(1);
+        -webkit-text-stroke: 1px red;
+        background: -webkit-linear-gradient(45deg,white, white, red,blue,green, white,yellow,red,white,black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+    100%{
+        transform: scale(1);
+        -webkit-text-stroke: 1px red;
+        background: -webkit-linear-gradient(45deg,white, white, red,blue,green,yellow,white,red, white,white,black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        letter-spacing: 1cap;
+        text-shadow: 10px 10px 40px rgb(228, 5, 5);
+    }
+}
+/* ======to======== */
+.two_conatiner{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(233, 12, 12, 0.219);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tobox{
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    position: relative;
+}
+.twobox{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    transform: skew(55deg, 45deg);
+}
+.two_T{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 70px;
+    line-height: 100%;
+    color: aqua;
+    animation: ttt 2s ease-in-out infinite;
+    text-transform: uppercase;
+    
+}
+@keyframes ttt{
+   from{
+    bottom: -10px;
+    left: 20px;
+   }to{
+    bottom: 60px;
+    left: 20px;
+   }
+}
+.two_O{
+    font-size: 50px;
+    position: absolute;
+    font-size: 50px;
+    top: -2px;
+        right: 55px;
+    animation: ooos 2s ease-in-out infinite;
+}
+@keyframes ooos{
+    0%{
+        top: 10px;
+        right: 10px;
+    }
+    10%{
+        top: 34px;
+        right: -16px;
+    }
+    15%{
+        top: 58px;
+        right: -25px;
+    }
+    20%{
+        top: 49px;
+        right: 8px;
+    }
+    30%{
+        top: 18px;
+        right: 55px;
+    }
+    40%{
+        top: -35px;
+        right: 92px;
+    }
+    50%{
+        font-size: 20px ;
+        top: -7px;
+        right: 100px;
+    }
+    100%{
+        top: 10px;
+        right: 100px;
+    }
+}
+/* ===============main car on road======= */
+#main{
+    width: 800px;
+    height: 600px;
+    background-image: url(./css/images/road-second.png);
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+.first_car{
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    top: 260px;
+    animation: toleft 4s infinite alternate;
+}
+@keyframes toleft{
+    from{
+       top: 260px;
+       left:0px; 
+    }
+    to{
+        left: 800px;
+        top: 260px;
+    }
+}
+/* ============== second-car=========== */
+.second_car{
+    width: 30px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 355px;
+    animation: tsecondcar 3s infinite ;
+    animation-delay: .5s;
+}
+@keyframes tsecondcar{
+    from{
+       bottom: 0px;
+       left:355px; 
+    }
+    to{
+        bottom: 560px;
+        left:355px; 
+    }
+}
+/* ================= third-car  ============ */
+.third_car{
+    width: 70px;
+    height: 37px;
+    position: absolute;
+    top: 300px;
+    right: 0;
+    animation: thirdcar 6s infinite;
+    animation-delay: 2s;
+}
+@keyframes thirdcar{
+0%{
+    top: 300px;
+    right: 0;
+}
+20%{
+    top: 300px;
+    right: 355px;
+}
+45%{
+    transform: rotate(-90deg);
+}
+47%{
+    top: 560px;
+    right: 355px;
+}
+55%{
+    transform: rotate(90deg);
+    top: 560px;
+    right: 385px;
+}
+80%{
+    top: 300px;
+    right: 385px;
+}
+100%{
+    top: 300px;
+    right: 800px;
+}
+}
+/* =============== forth-car  ============= */
+.four_car{
+    width: 25px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 375px;
+    animation: fourcar 5s infinite;
+}
+@keyframes fourcar{
+    0%{
+        top: 0;
+        right: 375px;
+    }
+    30%{
+        right: 375px;
+        top: 200px;
+    }
+    60%{
+        right: 375px;
+        top: 200px;
+    }
+    100%{
+        right: 375px;
+        top: 550px;
+    }
+}
+/* ==============whell============== */
+.wheel_continer{
+    width: 400px;
+    height: 700px;
+    background-color: antiquewhite;
+    margin-left: 100px;
+    position: relative;
+}
+.piler{
+    width: 20px;
+    height: 550px;
+    background-color: #b14d4d;
+    margin: 5px;
+    position: absolute;
+
+}
+.fornt-piler-1{
+    bottom: 0;
+    left: 20px;
+    transform: rotate(20deg) translate(70px) ;
+}
+.fornt-piler-2{
+    bottom: 0;
+    right: 20px;
+    background-color: #b14d4d;
+    transform: rotate(-20deg) translate(-70px);
+    color: pin;
+
+}
+.back-piler{
+    height: 400px;
+    top: 200px;
+    left: 180px;
+}
+.circle{
+    width: 400px;
+    height: 400px;
+    background-image: conic-gradient(red 0deg,red 20deg, #ff000000 20deg, #ff000000 45deg, yellow 45deg, yellow 65deg,#ff000000 65deg, #ff000000 90deg, green 90deg, green 115deg,#ff000000 115deg, #ff000000 135deg, blue 135deg
+    ,blue 155deg, #ff000000 155deg, #ff000000 180deg, orange 180deg,orange 200deg,#ff000000 200deg, #ff000000 225deg, blueviolet 225deg,blueviolet 245deg,#ff000000 245deg, #ff000000 265deg, pink 265deg, pink 285deg, #ff000000 285deg, #ff000000 310deg, white 310deg);
+    border: 20px solid gray;
+    border-radius: 50%;
+    position: absolute;
+    animation: wheel 3s ease infinite;
+}
+@keyframes wheel{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========clock_container=========== */
+.clock-container{
+    width: 450px;
+    height: 450px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock_box{
+    width: 400px;
+    height: 400px;
+    background-color: #b14d4d;
+
+}
+.clock{
+    width: 100%;
+    height: 100%;
+    border: 35px solid green;
+    border-radius: 50%;
+    position: relative;
+}
+.numberbox{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.num{
+    font-size: 50px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+}
+.num1{
+    top: 0;
+    left: 45%;
+}
+.num2{
+    top: 45%;
+    right:0;
+}
+.num3{
+    left:0;
+    top:45%;
+}
+.num4{
+    bottom:0;
+    left:40%   
+}
+#fork{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 99999;
+}
+.indicator{
+    width: 110px;
+    height: 110px;
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 118px;
+    left: 118px;
+    
+    animation: hourindicator 60s  infinite;
+     
+}
+@keyframes hourindicator{
+    0%{
+        transform: rotate(0);
+    }
+    10%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.hour_image{
+    width: auto;
+    height: 150px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+
+.munite{
+    width: 100px;
+    height: 100px;
+    /* background-color: rgba(100, 194, 194); */
+    animation: muniteindicator 36s ease infinite;
+}
+@keyframes muniteindicator{
+    0%{
+        transform: rotate(0);
+    }
+    10%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.munite_image{
+    width: auto;
+    height: 200px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+}
+
+.second{
+    width: 100px;
+    height: 100px;
+    /* background-color: rgba(100, 194, 194); */
+    animation: secondindicator 6s ease infinite;
+}
+.scecond_image{
+    width: auto;
+    height: 200px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+@keyframes secondindicator{
+    from{
+        transform: rotate(0);
+    }to{
+        transform: rotate(360deg);
+    }
+}
